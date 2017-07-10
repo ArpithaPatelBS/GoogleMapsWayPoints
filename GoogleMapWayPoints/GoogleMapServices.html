@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Google Map Services</title> 
+		<!-- Adding google API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAauTpsUmKqesSQreCQa4vF7kRdpfadYUU&signed_in=true&callback=initMap"
+        async defer></script>
+	<script type="text/javascript" src="GoogleMapServices.js"></script>
+	<link rel="stylesheet" type="text/css" href="GoogleMapServices.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="right-panel">
+    <div>
+	<!-- Way point where you need to stop-->
+    <b>Waypoints:</b> <br>
+    <i>(Enter the place to visit on the way)</i> <br>
+		<input type="text" id="waypoint"/>
+    <br>
+	<!-- Destination Address-->
+    <b>End:</b> <br>
+	<i>(Enter the destination address)</i> <br>
+		<input type="text" id="end"/>
+    <br>
+	<!-- Mode of travel-->
+	<strong>Mode of Travel: </strong><br>
+	<i>(Enter the mode of transportation)</i><br>
+	<select id="mode">
+	  <option value="WALKING">Walking</option>
+	  <option value="BICYCLING">Bicycling</option>
+	  <option value="TRANSIT">Transit</option>
+	</select><br>
+      <input type="submit" id="submit">
+    </div>
+	<!-- Panel to hold the text directions-->
+    <div id="directions-panel"></div>
+    </div>
+  </body>
+</html>
